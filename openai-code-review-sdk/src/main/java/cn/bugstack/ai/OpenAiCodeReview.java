@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 public class OpenAiCodeReview {
     public static void main(String[] args) throws Exception {
-        System.out.println("测试执行");
+        System.out.println("测试执行 open");
 
         //github的token
         String token = System.getenv("GITHUB_TOKEN");
