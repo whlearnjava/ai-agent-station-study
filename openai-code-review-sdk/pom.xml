@@ -139,7 +139,7 @@
                     <archive>
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <mainClass>com.huadain.sdk.OpenAiCodeReview</mainClass>
+                            <mainClass>cn.bugstack.ai.OpenAiCodeReview</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
