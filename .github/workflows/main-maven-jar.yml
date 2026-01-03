@@ -28,9 +28,9 @@ jobs:
         run: mvn clean install
 
       - name: Copy openai-code-review-sdk JAR
-        run: mvn dependency:copy -Dartifact=cn.bugstack.ai:openai-code-review-sdk:1.0 -DoutputDirectory=./libs
+        run: mvn dependency:copy -Dartifact=cn.bugstack.ai:openai-code-review-sdk-1.0-SNAPSHOT -DoutputDirectory=./libs
 
       - name: Run Code Review
-        run: java -jar ./libs/openai-code-review-sdk-1.0.jar
+        run: java -jar ./libs/openai-code-review-sdk-1.0-SNAPSHOT.jar
         env:
           GITHUB_TOKEN: ${{ secrets.CODE_TOKEN }}
