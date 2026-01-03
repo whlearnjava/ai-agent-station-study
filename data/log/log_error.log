@@ -1,0 +1,42 @@
+25-12-27.17:43:39.084 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:43:39.084 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:46:33.861 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:46:33.861 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:51:13.046 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=2m43s6ms550µs).
+25-12-27.17:52:43.394 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:52:43.394 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:59:04.417 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.17:59:04.417 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:01:30.316 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:01:30.316 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:02:06.510 [ForkJoinPool.commonPool-worker-1] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:02:06.510 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:08:30.288 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:08:30.291 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:19:23.298 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.18:19:23.298 [ForkJoinPool.commonPool-worker-4] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.22:22:07.394 [pool-2-thread-7 ] ERROR AgentDispatchDispatchService - AutoAgent执行异常：No bean named 'ai_client_4101' available
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_4101' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.AbstractExecuteSupport.getBean(AbstractExecuteSupport.java:44)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.AbstractExecuteSupport.getChatClientByClientId(AbstractExecuteSupport.java:40)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:55)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.Step1AnalyzerNode.doApply(Step1AnalyzerNode.java:13)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.step.RootNode.doApply(RootNode.java:13)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.domain.agent.service.execute.auto.AutoAgentExecuteStrategy.execute(AutoAgentExecuteStrategy.java:33)
+	at cn.bugstack.ai.domain.agent.service.dispatch.AgentDispatchDispatchService.lambda$dispatch$0(AgentDispatchDispatchService.java:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+25-12-27.22:45:53.667 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.22:45:53.667 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.22:49:12.654 [ForkJoinPool.commonPool-worker-2] WARN  StdioClientTransport   - Process terminated with code 1
+25-12-27.22:49:12.656 [ForkJoinPool.commonPool-worker-3] WARN  StdioClientTransport   - Process terminated with code 1

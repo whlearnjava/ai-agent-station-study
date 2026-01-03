@@ -1,0 +1,721 @@
+25-12-25.18:42:34.089 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 14892 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.18:42:34.091 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.18:42:36.481 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.18:42:36.501 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.18:42:36.503 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.18:42:36.504 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.18:42:36.632 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.18:42:36.632 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2458 ms
+25-12-25.18:42:37.777 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.18:42:37.784 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.18:42:37.784 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.18:42:38.202 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.18:42:38.991 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.18:42:39.004 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.18:42:39.020 [main            ] INFO  Application            - Started Application in 5.843 seconds (process running for 9.579)
+25-12-25.18:42:39.025 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-25.18:42:39.028 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.031 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.031 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.032 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.032 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.033 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.034 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-25.18:42:39.069 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-25.18:42:40.975 [pool-2-thread-6 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@6360af3d
+25-12-25.18:42:40.981 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-25.18:42:42.546 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:42:42.551 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-25.18:42:42.552 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:42:43.082 [HttpClient-12-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-25.18:42:43.170 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-25.18:42:43.180 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-25.18:42:43.180 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:42:43.189 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at cn.bugstack.ai.Application.main(Application.java:14)
+25-12-25.18:43:03.144 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-12-25.18:43:03.144 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-12-25.18:43:03.147 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-12-25.18:46:00.994 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.18:46:01.589 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.18:46:01.596 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-25.18:46:02.575 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-25.18:46:10.676 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 10476 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.18:46:10.679 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.18:46:12.835 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.18:46:12.855 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.18:46:12.857 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.18:46:12.857 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.18:46:12.974 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.18:46:12.976 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2215 ms
+25-12-25.18:46:14.043 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.18:46:14.048 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.18:46:14.049 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.18:46:14.441 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.18:46:15.163 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.18:46:15.176 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.18:46:15.190 [main            ] INFO  Application            - Started Application in 5.45 seconds (process running for 6.546)
+25-12-25.18:46:15.196 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-25.18:46:15.199 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.201 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.202 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.202 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.202 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.203 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.203 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-25.18:46:15.230 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-25.18:46:16.809 [pool-2-thread-5 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@348aede7
+25-12-25.18:46:16.811 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-25.18:46:19.011 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:46:19.017 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-25.18:46:19.017 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:46:19.369 [HttpClient-12-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-25.18:46:19.440 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-25.18:46:19.445 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-25.18:46:19.446 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:46:19.451 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at cn.bugstack.ai.Application.main(Application.java:16)
+25-12-25.18:47:21.145 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-12-25.18:47:21.145 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-12-25.18:47:21.147 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-12-25.18:48:07.490 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.18:48:08.188 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.18:48:08.196 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-25.18:48:09.361 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-25.18:48:17.130 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 7276 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.18:48:17.135 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.18:48:23.601 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.18:48:23.640 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.18:48:23.644 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.18:48:23.645 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.18:48:23.823 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.18:48:23.824 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6592 ms
+25-12-25.18:48:28.964 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.18:48:28.986 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.18:48:28.986 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.18:48:30.680 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.18:48:33.284 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.18:48:33.323 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.18:48:33.352 [main            ] INFO  Application            - Started Application in 17.467 seconds (process running for 20.07)
+25-12-25.18:48:33.367 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-25.18:48:33.381 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.985 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.988 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.990 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.992 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.993 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-25.18:48:38.995 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-25.18:48:42.741 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-25.18:49:02.588 [pool-2-thread-5 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b12a9f3
+25-12-25.18:49:02.596 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-25.18:49:19.553 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.18:49:20.759 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.18:49:20.765 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-25.18:49:31.618 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-25.18:49:31.620 [pool-2-thread-2 ] WARN  ProxyConnection        - MainHikariPool - Connection com.mysql.cj.jdbc.ConnectionImpl@4b12a9f3 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 26,597 milliseconds ago. The last packet sent successfully to the server was 28,965 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333)
+	at jdk.proxy2/jdk.proxy2.$Proxy77.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:194)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy83.queryBySourceTypeAndId(Unknown Source)
+	at cn.bugstack.ai.infrastructure.adapter.repository.AgentRepository.AiClientModelVOByClientIds(AgentRepository.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727)
+	at cn.bugstack.ai.infrastructure.adapter.repository.AgentRepository$$SpringCGLIB$$0.AiClientModelVOByClientIds(<generated>)
+	at cn.bugstack.ai.domain.agent.service.armory.business.data.impl.AiClientLoadDataStrategy.lambda$loadData$1(AiClientLoadDataStrategy.java:35)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run$$$capture(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 26,597 milliseconds ago. The last packet sent successfully to the server was 28,965 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:520)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:700)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:639)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:987)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:666)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 43 common frames omitted
+Caused by: java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1455)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1059)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:81)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:514)
+	... 48 common frames omitted
+25-12-25.18:59:00.685 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 20012 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.18:59:00.688 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.18:59:02.838 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.18:59:02.862 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.18:59:02.864 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.18:59:02.864 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.18:59:02.976 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.18:59:02.976 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2206 ms
+25-12-25.18:59:04.022 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.18:59:04.029 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.18:59:04.029 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.18:59:04.488 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.18:59:05.298 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.18:59:05.316 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.18:59:05.334 [main            ] INFO  Application            - Started Application in 5.613 seconds (process running for 6.794)
+25-12-25.18:59:05.341 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-25.18:59:05.346 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.351 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.352 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.352 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.353 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.353 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.355 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-25.18:59:05.389 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-25.18:59:06.606 [pool-2-thread-4 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@26d2d7c3
+25-12-25.18:59:06.609 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-25.18:59:07.660 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:59:07.667 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-25.18:59:07.667 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:59:08.172 [HttpClient-12-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-25.18:59:08.236 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-25.18:59:08.240 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-25.18:59:08.241 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.18:59:08.246 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at cn.bugstack.ai.Application.main(Application.java:14)
+25-12-25.19:00:44.493 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:00:45.128 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:00:45.136 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-25.19:00:45.522 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-25.19:00:49.542 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 19628 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:00:49.545 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:00:51.796 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:00:51.816 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:00:51.819 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:00:51.819 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:00:51.936 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:00:51.937 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2310 ms
+25-12-25.19:00:53.075 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:00:53.080 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:00:53.080 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:00:53.473 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:00:54.243 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:00:54.256 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:00:54.276 [main            ] INFO  Application            - Started Application in 5.673 seconds (process running for 6.667)
+25-12-25.19:00:54.279 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-25.19:00:54.282 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.286 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.286 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.286 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.286 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.287 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.288 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-25.19:00:54.314 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-25.19:00:54.927 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@259115d9
+25-12-25.19:00:54.931 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-25.19:00:55.816 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.19:00:55.821 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-25.19:00:55.822 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.19:00:56.176 [HttpClient-12-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-25.19:00:56.247 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-25.19:00:56.252 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-25.19:00:56.252 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-25.19:00:56.257 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at cn.bugstack.ai.Application.main(Application.java:14)
+25-12-25.19:02:22.720 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:02:23.336 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:02:23.343 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-25.19:02:23.753 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-25.19:02:27.941 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 11428 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:02:27.943 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:02:30.098 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:02:30.119 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:02:30.121 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:02:30.121 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:02:30.244 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:02:30.244 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2217 ms
+25-12-25.19:02:31.356 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:02:31.363 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:02:31.363 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:02:31.738 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:02:32.477 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:02:32.491 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:02:32.505 [main            ] INFO  Application            - Started Application in 5.51 seconds (process running for 6.514)
+25-12-25.19:02:32.510 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:02:32.513 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:02:56.186 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-12-25.19:02:56.186 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-12-25.19:02:56.187 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-12-25.19:03:47.915 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:03:48.547 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:03:59.739 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 5400 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:03:59.741 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:04:02.283 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:04:02.306 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:04:02.309 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:04:02.309 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:04:02.426 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:04:02.426 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2620 ms
+25-12-25.19:04:03.529 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:04:03.535 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:04:03.535 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:04:03.947 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:04:04.698 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:04:04.710 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:04:04.724 [main            ] INFO  Application            - Started Application in 5.95 seconds (process running for 7.352)
+25-12-25.19:04:04.729 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:04:04.732 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:04:15.260 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-12-25.19:04:15.260 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-12-25.19:04:15.262 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-12-25.19:04:15.315 [http-nio-8091-exec-1] INFO  AiAgentController      - 模拟登录 login fingerprint:uljpplllll01009
+25-12-25.19:04:21.617 [http-nio-8091-exec-2] INFO  AiAgentController      - 模拟登录 login fingerprint:uljpplllll01009
+25-12-25.19:18:01.631 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:18:02.199 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:18:53.859 [main            ] ERROR SpringApplication      - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.AppenderModelHandler - Could not create an Appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@758c83d8 - Failed to traverse model appender ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.AppenderModelHandler - Could not create an Appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@758c83d8 - Failed to traverse model appender ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at cn.bugstack.ai.Application.main(Application.java:16)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.model.processor.AppenderModelHandler - Could not create an Appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@758c83d8 - Failed to traverse model appender ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.AppenderModelHandler - Could not create an Appender of type [net.logstash.logback.appender.LogstashTcpSocketAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+ERROR in ch.qos.logback.core.model.processor.DefaultProcessor@758c83d8 - Failed to traverse model appender ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:269)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:67)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:58)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:197)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:335)
+	... 19 common frames omitted
+	Suppressed: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:69)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:44)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:33)
+		at ch.qos.logback.core.model.processor.AppenderModelHandler.handle(AppenderModelHandler.java:67)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:222)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:136)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:178)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:123)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:66)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:300)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$2(LogbackLoggingSystem.java:262)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:483)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+		... 23 common frames omitted
+	Caused by: java.lang.ClassNotFoundException: net.logstash.logback.appender.LogstashTcpSocketAppender
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
+		... 39 common frames omitted
+	Suppressed: ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+		at ch.qos.logback.core.model.processor.AppenderModelHandler.handle(AppenderModelHandler.java:75)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:222)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:136)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:178)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:123)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:66)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:300)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$2(LogbackLoggingSystem.java:262)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:483)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+		... 23 common frames omitted
+	Caused by: [CIRCULAR REFERENCE: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender]
+	Suppressed: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:69)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:44)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassName(OptionHelper.java:33)
+		at ch.qos.logback.core.model.processor.AppenderModelHandler.handle(AppenderModelHandler.java:67)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:222)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:136)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:178)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:123)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:66)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:300)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$2(LogbackLoggingSystem.java:262)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:483)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+		... 23 common frames omitted
+	Caused by: java.lang.ClassNotFoundException: net.logstash.logback.appender.LogstashTcpSocketAppender
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+		at ch.qos.logback.core.util.OptionHelper.instantiateByClassNameAndParameter(OptionHelper.java:56)
+		... 39 common frames omitted
+	Suppressed: ch.qos.logback.core.model.processor.ModelHandlerException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender
+		at ch.qos.logback.core.model.processor.AppenderModelHandler.handle(AppenderModelHandler.java:75)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:241)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:222)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:136)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:178)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:123)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:66)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:300)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$2(LogbackLoggingSystem.java:262)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:483)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+		... 23 common frames omitted
+	Caused by: [CIRCULAR REFERENCE: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type net.logstash.logback.appender.LogstashTcpSocketAppender]
+25-12-25.19:24:25.087 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 9548 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:24:25.090 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:24:27.254 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:24:27.279 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:24:27.281 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:24:27.282 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:24:27.399 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:24:27.399 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2231 ms
+25-12-25.19:24:28.473 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:24:28.480 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:24:28.480 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:24:28.943 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:24:29.835 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:24:29.851 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:24:29.867 [main            ] INFO  Application            - Started Application in 5.78 seconds (process running for 6.882)
+25-12-25.19:24:29.871 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:24:29.874 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:24:30.824 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:24:31.434 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:26:27.080 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 14808 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:26:27.084 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:26:29.408 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:26:29.428 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:26:29.430 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:26:29.430 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:26:29.548 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:26:29.548 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2385 ms
+25-12-25.19:26:30.665 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:26:30.671 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:26:30.671 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:26:31.115 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:26:31.920 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:26:31.935 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:26:31.950 [main            ] INFO  Application            - Started Application in 5.93 seconds (process running for 7.128)
+25-12-25.19:26:31.955 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:26:31.958 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:29:02.204 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:29:02.818 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:29:21.225 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 14632 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:29:21.229 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:29:23.416 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:29:23.438 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:29:23.440 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:29:23.441 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:29:23.558 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:29:23.560 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2264 ms
+25-12-25.19:29:24.664 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:29:24.669 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:29:24.670 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:29:25.079 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:29:25.840 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:29:25.865 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:29:25.879 [main            ] INFO  Application            - Started Application in 5.487 seconds (process running for 20.364)
+25-12-25.19:29:25.883 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:29:25.886 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:31:01.680 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:31:02.342 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:31:06.998 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 11580 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:31:07.002 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:31:09.989 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:31:10.009 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:31:10.011 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:31:10.013 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:31:10.130 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:31:10.130 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3004 ms
+25-12-25.19:31:11.264 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:31:11.270 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:31:11.270 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:31:11.675 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:31:12.480 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:31:12.494 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:31:12.510 [main            ] INFO  Application            - Started Application in 6.676 seconds (process running for 7.74)
+25-12-25.19:31:12.514 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:31:12.518 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:32:18.702 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:32:19.283 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:32:23.297 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 5096 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:32:23.302 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:32:25.414 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:32:25.433 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:32:25.436 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:32:25.437 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:32:25.560 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:32:25.561 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2207 ms
+25-12-25.19:32:26.669 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:32:26.675 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:32:26.675 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:32:27.093 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:32:27.843 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:32:27.857 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:32:27.871 [main            ] INFO  Application            - Started Application in 5.807 seconds (process running for 6.849)
+25-12-25.19:32:27.876 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:32:27.881 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.19:49:22.298 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.19:49:22.897 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-25.19:50:09.502 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 3668 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-25.19:50:09.507 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-25.19:50:11.609 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-25.19:50:11.628 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-25.19:50:11.630 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-25.19:50:11.631 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-25.19:50:11.765 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-25.19:50:11.766 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2203 ms
+25-12-25.19:50:12.962 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-25.19:50:12.968 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-25.19:50:12.969 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-25.19:50:13.388 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-25.19:50:14.126 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-25.19:50:14.141 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-25.19:50:14.154 [main            ] INFO  Application            - Started Application in 5.901 seconds (process running for 6.913)
+25-12-25.19:50:14.158 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[])
+25-12-25.19:50:14.161 [main            ] WARN  AiAgentAutoConfiguration - AI Agent 自动装配配置的客户端ID列表为空
+25-12-25.20:10:51.344 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-25.20:10:51.927 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete

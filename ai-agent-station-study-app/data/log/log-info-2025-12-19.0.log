@@ -1,0 +1,177 @@
+25-12-19.19:06:24.718 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 2268 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:06:24.730 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:06:33.199 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:06:33.213 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:06:33.214 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:06:35.077 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:06:37.027 [main            ] INFO  AgentTest              - Started AgentTest in 15.407 seconds (process running for 22.044)
+25-12-19.19:06:37.049 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:06:37.066 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:06:53.548 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:06:53.552 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:06:53.557 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:07:29.087 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:07:29.092 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:07:29.097 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:07:29.165 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:07:30.390 [pool-2-thread-6 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@57df6d0d
+25-12-19.19:07:30.408 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-19.19:07:41.513 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:08:35.201 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m4s694ms895µs900ns).
+25-12-19.19:08:35.244 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-19.19:08:35.244 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:09:48.463 [MainHikariPool housekeeper] WARN  HikariPool             - MainHikariPool - Thread starvation or clock leap detected (housekeeper delta=1m13s263ms56µs800ns).
+25-12-19.19:09:54.621 [HttpClient-12-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-19.19:09:54.736 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-19.19:09:54.808 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-19.19:09:57.141 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:09.839 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_model_2001
+25-12-19.19:10:12.434 [main            ] INFO  AiClientAdvisorNode    - Ai Agent 构建节点，Advisor 顾问角色{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:21.072 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_advisor_4001
+25-12-19.19:10:21.073 [main            ] INFO  AiClientNode           - Ai Agent 构建节点，客户端{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:32.702 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3101
+25-12-19.19:10:32.775 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3102
+25-12-19.19:10:32.860 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3103
+25-12-19.19:10:32.863 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3104
+25-12-19.19:10:32.864 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配完成，结果: null
+25-12-19.19:10:43.891 [pool-2-thread-7 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3001]
+25-12-19.19:10:43.891 [pool-2-thread-8 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3001]
+25-12-19.19:10:43.891 [pool-2-thread-9 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3001]
+25-12-19.19:10:43.891 [pool-2-thread-10] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3001]
+25-12-19.19:10:43.891 [pool-2-thread-11] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3001]
+25-12-19.19:10:43.891 [pool-2-thread-12] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3001]
+25-12-19.19:10:44.915 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3001"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:45.617 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-19.19:10:45.618 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3001"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:47.565 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-19.19:10:47.624 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-19.19:10:47.632 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-19.19:10:47.995 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3001"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:48.114 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_model_2001
+25-12-19.19:10:48.730 [main            ] INFO  AiClientAdvisorNode    - Ai Agent 构建节点，Advisor 顾问角色{"commandIdList":["3001"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:48.730 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_advisor_4001
+25-12-19.19:10:48.730 [main            ] INFO  AiClientNode           - Ai Agent 构建节点，客户端{"commandIdList":["3001"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:10:49.330 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3001
+25-12-19.19:10:49.330 [main            ] INFO  AgentTest              - 模型构建:OpenAiChatModel [defaultOptions=OpenAiChatOptions: {"streamUsage":false,"model":"gpt-4.1-mini"}]
+25-12-19.19:10:54.308 [main            ] INFO  AgentTest              - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-CoSfjeVrLeRRN0EiVucF2Obaqra05","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":50024,"tokensReset":{"nano":0,"negative":false,"seconds":1295485{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":965,"completionTokens":94,"totalTokens":1059,"nativeUsage":{"completion_tokens":94,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":965,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":1059}}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","refusal":"","finishReason":"STOP","annotations":[],"index":0,"id":"chatcmpl-CoSfjeVrLeRRN0EiVucF2Obaqra05"},"text":"您好！我目前可以使用的工具包括：\n\n1. functions.JavaSDKMCPClient_AIsearch：用于执行搜索，根据您的查询关键词或短语获取相关信息，可以指定搜索模型、查询指令、温度和top_p参数等。\n\n如果您有具体需求或想了解更多关于某个工具的使用方法，请告诉我，我可以为您详细介绍或帮您使用这些工具。您还需要了解其它方面的工具吗？","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.nativeUsage.completion_tokens_details.prompt_tokens_details.result"}]}
+25-12-19.19:10:54.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-19.19:10:54.756 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-19.19:14:19.065 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 12560 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:14:19.070 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:14:25.167 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:14:25.177 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:14:25.177 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:14:26.651 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:14:28.187 [main            ] INFO  AgentTest              - Started AgentTest in 10.982 seconds (process running for 14.0)
+25-12-19.19:14:28.202 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:14:28.217 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.915 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.915 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.920 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.923 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.925 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.928 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:17:22.954 [pool-2-thread-6 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:17:32.104 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 17548 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:17:32.112 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:17:38.325 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:17:38.337 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:17:38.337 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:17:39.386 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:17:41.479 [main            ] INFO  AgentTest              - Started AgentTest in 11.258 seconds (process running for 14.299)
+25-12-19.19:17:41.494 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:17:41.509 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.989 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.989 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.989 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.997 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.997 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:17:58.998 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:17:59.037 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:18:07.172 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 15432 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:18:07.182 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:18:12.936 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:18:12.945 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:18:12.945 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:18:13.877 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:18:15.422 [main            ] INFO  AgentTest              - Started AgentTest in 10.17 seconds (process running for 13.431)
+25-12-19.19:18:15.432 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:18:15.448 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.205 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.206 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.213 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.217 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.221 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.224 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:22:19.249 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:23:10.937 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 11452 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:23:10.949 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:23:16.619 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:23:16.630 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:23:16.630 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:23:17.650 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:23:19.160 [main            ] INFO  AgentTest              - Started AgentTest in 10.074 seconds (process running for 13.275)
+25-12-19.19:23:19.167 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:23:19.184 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.977 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.982 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.986 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.989 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.992 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:26:48.996 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:26:49.033 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:26:55.757 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 640 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:26:55.769 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:27:01.481 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:27:01.492 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:27:01.492 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:27:02.446 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:27:03.996 [main            ] INFO  AgentTest              - Started AgentTest in 10.068 seconds (process running for 13.056)
+25-12-19.19:27:04.010 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103])
+25-12-19.19:27:04.022 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103]
+25-12-19.19:27:48.493 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103]
+25-12-19.19:27:48.498 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103]
+25-12-19.19:27:48.501 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103]
+25-12-19.19:27:48.506 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103]
+25-12-19.19:27:48.510 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103]
+25-12-19.19:27:48.513 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103]
+25-12-19.19:27:48.540 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:27:56.249 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 18516 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:27:56.255 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:28:02.716 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:28:02.728 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:28:02.729 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:28:03.729 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:28:05.508 [main            ] INFO  AgentTest              - Started AgentTest in 11.54 seconds (process running for 14.849)
+25-12-19.19:28:05.523 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:28:05.537 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:32:15.647 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.583 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.587 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.590 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.596 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.600 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:33:15.620 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:33:25.253 [main            ] INFO  AgentTest              - Starting AgentTest using Java 17.0.3.1 with PID 18244 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-19.19:33:25.273 [main            ] INFO  AgentTest              - The following 1 profile is active: "dev"
+25-12-19.19:33:31.303 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-19.19:33:31.313 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-19.19:33:31.313 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-19.19:33:32.273 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-19.19:33:33.764 [main            ] INFO  AgentTest              - Started AgentTest in 10.771 seconds (process running for 14.61)
+25-12-19.19:33:33.777 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-19.19:33:33.791 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-19.19:37:59.640 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.375 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.383 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.387 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.392 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.396 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-19.19:38:01.460 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-19.19:38:02.668 [pool-2-thread-4 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5da62c22
+25-12-19.19:38:02.683 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-19.19:38:11.808 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:38:11.818 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-19.19:38:11.818 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-19.19:38:11.832 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-19.19:38:11.939 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.

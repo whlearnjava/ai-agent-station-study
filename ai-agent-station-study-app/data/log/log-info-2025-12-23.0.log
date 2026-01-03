@@ -1,0 +1,1269 @@
+25-12-23.11:00:27.542 [main            ] INFO  FlowAgentTest          - Starting FlowAgentTest using Java 17.0.3.1 with PID 10556 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.11:00:27.544 [main            ] INFO  FlowAgentTest          - The following 1 profile is active: "dev"
+25-12-23.11:00:34.381 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.11:00:34.390 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.11:00:34.390 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.11:00:35.148 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.11:00:36.158 [main            ] INFO  FlowAgentTest          - Started FlowAgentTest in 9.543 seconds (process running for 12.887)
+25-12-23.11:00:36.163 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.11:00:36.169 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.175 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.176 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.176 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.177 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.178 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.178 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.11:00:36.212 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.11:00:36.984 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fc9c52d
+25-12-23.11:00:36.987 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.11:00:37.997 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.11:00:38.004 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.11:00:38.005 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.11:00:38.579 [HttpClient-12-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.11:00:38.664 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.11:00:38.672 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.11:00:38.672 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.11:00:38.689 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.11:00:40.357 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.11:00:40.469 [main            ] INFO  FlowAgentTest          - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.11:00:45.867 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-csdn, version=1.0.0] and Instructions null
+25-12-23.11:00:45.870 [main            ] INFO  FlowAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-csdn, version=1.0.0], instructions=null]
+25-12-23.11:00:46.073 [main            ] INFO  FlowAgentTest          - 工具推荐请求: 我需要检索各个技术论坛最新技术资料，编写技术文章，发送到 CSDN 平台，以及发送消息通知
+25-12-23.11:00:59.567 [main            ] INFO  FlowAgentTest          - 工具推荐结果: **🔧 可用MCP工具清单**
+```
+序号 | 工具名称         | 服务类型   | 核心功能               | 参数要求                                | 可靠性评级
+-----|-----------------|------------|-----------------------|----------------------------------------|----------
+1    | functions.JavaSDKMCPClient_AIsearch | 搜索服务   | 执行技术资料在线检索     | query（必填，查询关键词），model（可选，摘要模型）   | 高
+2    | functions.JavaSDKMCPClient_saveArticle | 内容发布服务 | 发布技术文章到CSDN      | title（文章标题），Description（简述），markdowncontent（内容），tags（标签） | 高
+3    | 消息发送服务（需确认具体支持的接口）       | 通知服务   | 发送消息通知           | 通知内容、目标用户或渠道                   | 待确认
+```
+
+**🎯 智能推荐方案**
+- 主推工具：functions.JavaSDKMCPClient_AIsearch - 匹配度：95% - 理由：支持针对多种技术关键词的精准搜索，可配合模型进行信息总结，适合快速获取最新技术资料。
+- 备选工具：functions.JavaSDKMCPClient_saveArticle - 适用场景：当已编辑好文章，需要发布到CSDN平台时。
+- 备选工具：消息发送服务 - 适用场景：完成文章发布后可用于通知团队或用户，确保消息及时送达。
+- 组合策略：先使用search工具获取最新技术资料 → 编写并使用saveArticle工具发布文章 → 利用消息发送服务推送发布通知。
+
+**📋 执行标准指南**
+- 调用顺序：搜索技术资料 → 编写和保存文章 → 发送发布通知
+- 参数配置：
+  - 搜索：query设为具体技术关键词，model建议使用“ERNIE-3.5-8K”进行内容总结。
+  - 文章发布：title明确文章主题，Description简洁描述内容摘要，markdowncontent详细内容，tags精选关键词。
+  - 通知内容：包含文章链接+摘要，明确接收人。
+- 错误处理：
+  - 搜索无结果时提示调整关键词。
+  - 文章发布失败时重试或反馈错误详情。
+  - 通知发送失败记录日志并重试。
+- 性能优化：
+  - 针对复杂技术主题可分步分批搜索。
+  - 缓存热点技术内容减少重复请求。
+  - 异步调用发布与通知，提高整体流程效率。
+
+**⚠️ 注意事项**
+- 安全约束：发布文章和发送消息需具备CSDN及通知系统权限，防止未授权操作。
+- 资源消耗：搜索及大规模发布耗费计算资源和网络流量，合理控制调用频次。
+- 兼容性：确认各服务接口版本兼容及环境支持，如MCP协议版本一致。 
+
+请确认是否需要集成具体的消息通知接口或其他技术论坛定向搜索策略，我可以基于需求为您细化方案。
+25-12-23.11:00:59.587 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.11:01:00.013 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:06:12.920 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 14448 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:06:12.923 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:06:17.375 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:06:17.385 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:06:17.385 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:06:18.237 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:06:19.458 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 7.618 seconds (process running for 10.274)
+25-12-23.15:06:19.465 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:06:19.471 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.475 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.476 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.476 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.480 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.480 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.482 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:06:19.522 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:06:20.328 [pool-2-thread-4 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@270b487b
+25-12-23.15:06:20.331 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:06:21.304 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:06:21.312 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:06:21.313 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:06:21.981 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:06:22.067 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:06:22.074 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:06:22.075 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:06:22.089 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:06:23.483 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:06:23.551 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:06:27.850 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:06:27.852 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:06:37.867 [main            ] ERROR AutoAgentTest          - Failed to initialize MCP client
+reactor.core.Exceptions$ReactiveException: java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 10000ms in 'source(MonoDeferContextual)' (and no fallback has been configured)
+	at reactor.core.Exceptions.propagate(Exceptions.java:410)
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:102)
+	at reactor.core.publisher.Mono.block(Mono.java:1779)
+	at io.modelcontextprotocol.client.McpSyncClient.initialize(McpSyncClient.java:171)
+	at cn.bugstack.ai.test.domain.AutoAgentTest.stdioMcpClient(AutoAgentTest.java:895)
+	at cn.bugstack.ai.test.domain.AutoAgentTest.init(AutoAgentTest.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104)
+		... 36 common frames omitted
+Caused by: java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 10000ms in 'source(MonoDeferContextual)' (and no fallback has been configured)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.handleTimeout(FluxTimeout.java:296)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.doTimeout(FluxTimeout.java:281)
+	at reactor.core.publisher.FluxTimeout$TimeoutTimeoutSubscriber.onNext(FluxTimeout.java:420)
+	at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.propagateDelay(MonoDelay.java:270)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.run(MonoDelay.java:285)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+25-12-23.15:06:53.672 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:06:58.014 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:06:58.438 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:09:48.866 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 17548 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:09:48.870 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:09:52.941 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:09:52.951 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:09:52.952 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:09:53.952 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:09:55.019 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 7.38 seconds (process running for 9.553)
+25-12-23.15:09:55.023 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:09:55.029 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.032 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.032 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.032 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.032 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.037 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.037 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:09:55.074 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:09:55.802 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b5959df
+25-12-23.15:09:55.803 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:09:56.877 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:09:56.892 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:09:56.892 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:09:57.297 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:09:57.371 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:09:57.377 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:09:57.377 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:09:57.388 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:09:59.122 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:09:59.192 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:10:04.532 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:10:04.532 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:10:06.796 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:10:06.821 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:10:06.821 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:10:06.826 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:10:07.187 [HttpClient-18-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:10:07.251 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:10:11.647 [pool-13-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:10:11.652 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:10:13.933 [pool-18-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:10:13.956 [pool-16-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:10:13.956 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:10:13.961 [pool-18-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:10:28.677 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-Cpqp8zQEXj93IRADp7pou4EDEG1Zw","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":15191,"tokensReset":{"nano":0,"negative":false,"seconds":2198848{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":21901,"completionTokens":399,"totalTokens":22300}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","index":0,"annotations":[],"id":"chatcmpl-Cpqp8zQEXj93IRADp7pou4EDEG1Zw"},"text":"您可以使用的工具包括：\n\n1. 实用大揭密的5个抠图工具，如：哔格式抠图大师、酷鹫 AI 智能抠图、Adobe Photoshop、美图秀秀、Canva 可画等。\n2. 免费文件恢复工具，推荐数款不错的免费文件恢复软件，比如数据蛙恢复专家、DiskGenius、Recuva 等，适合数据恢复需求。\n3. 快速洗车的工具，如高压水枪、海绵、洗车手套、鹅皮布等。\n4. 大学期间推荐使用的学习工具，包含思维导图软件、滑记、裂克等文档格式转换工具和学习助手。\n5. Microsoft Advertising 平台，带来广告管理和SEO优化的多种免费工具。\n6. 各类电脑工具网站上资源丰富的在线工具箱，如编程开发、数据图表、图片处理等功能。\n7. 系统清理工具 BleachBit，帮助释放磁盘空间和保护隐私。\n8. 跨平台收藏工具 Pinbox，用于管理和同步收藏内容。\n9. 待办事项管理工具 周待办，支持多语言和自定义。\n10. 免费文件比较工具 WinMerge，支持文本及文件夹比较。\n\n还有多款终端高效工具，如Fish Shell、Starship、自带模糊查找工具fzf、快速跳转工具z等，适合提高命令行操作效率。\n\n如果你需要，我可以根据具体需求推荐适合的工具或详细介绍某一类工具的使用方法。","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.result"}]}
+25-12-23.15:10:28.717 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:10:29.137 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:14:15.198 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 17616 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:14:15.203 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:14:19.293 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:14:19.309 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:14:19.309 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:14:20.208 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:14:21.500 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 7.314 seconds (process running for 9.534)
+25-12-23.15:14:21.505 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:14:21.510 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.515 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.515 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.518 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.519 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.520 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.520 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:14:21.556 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:14:22.294 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7344b699
+25-12-23.15:14:22.304 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:14:23.286 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:14:23.291 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:14:23.291 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:14:23.762 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:14:23.846 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:14:23.851 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:14:23.851 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:14:23.861 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:14:25.318 [HttpClient-15-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:14:25.374 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:14:29.484 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:14:29.484 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:14:31.764 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:14:31.784 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:14:31.784 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:14:31.789 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:14:32.250 [HttpClient-18-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:14:32.357 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:14:39.799 [pool-13-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:14:39.800 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:14:42.468 [pool-18-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:14:42.493 [pool-16-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:14:42.493 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:14:42.501 [pool-18-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:14:57.800 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-CpqtTDQ7sKv21idwIw1bQYJcoFXuP","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":66600,"tokensReset":{"nano":0,"negative":false,"seconds":866427{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":19986,"completionTokens":369,"totalTokens":20355}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","refusal":"","finishReason":"STOP","index":0,"annotations":[],"id":"chatcmpl-CpqtTDQ7sKv21idwIw1bQYJcoFXuP"},"text":"您可以使用的工具包括但不限于以下几类：\n\n1. 绘图与数据分析工具\n   - GraphPad Prism：用于生物医学领域的统计作图与分析。\n   - Microsoft Excel：日常办公软件，带有简单易用的图表功能。\n   - R语言及ggplot2包：强大的统计编程绘图工具，支持高度自定义和复杂图形。\n\n2. 软件测试工具\n   - TestDirector、jira、Quality Center等管理工具。\n   - Jmeter、Postman、SoapUI等接口测试工具。\n   - Loadrunner等性能测试工具。\n\n3. 开发与调试工具\n   - DevTools（浏览器开发者工具），包含检查工具、元素控制台等。\n   - SQL Server Reporting Services工具，支持数据库管理和报表生成。\n\n4. 自动化与持续集成工具\n   - Jenkins、Hudson等持续集成工具。\n   - qtp、winrunner等C/S自动化测试工具。\n\n5. 容器及云服务管理工具\n   - Kubernetes、Docker Swarm、Mesosphere DC/OS等容器编排工具。\n   - Amazon ECS、Azure Container Service等云上的容器管理服务。\n\n这些工具覆盖了数据分析、软件测试、开发调试、自动化测试及容器管理等多个领域，您可以根据具体需求选择使用。如果您需要了解某个工具的详细信息或如何使用，欢迎告诉我！","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.result"}]}
+25-12-23.15:14:57.838 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:14:58.258 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:18:10.819 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 18196 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:18:10.823 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:18:15.593 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:18:15.604 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:18:15.605 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:18:16.711 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:18:18.107 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 8.855 seconds (process running for 10.915)
+25-12-23.15:18:18.113 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:18:18.120 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.126 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.128 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.126 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.132 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.134 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.139 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:18:18.185 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:18:19.364 [pool-2-thread-2 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@46358004
+25-12-23.15:18:19.368 [pool-2-thread-2 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:18:20.348 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:18:20.355 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:18:20.356 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:18:20.808 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:18:20.885 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:18:20.891 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:18:20.891 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:18:20.898 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:18:22.462 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:18:22.539 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:18:26.846 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:18:26.849 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:18:36.857 [main            ] ERROR AutoAgentTest          - Failed to initialize MCP client
+reactor.core.Exceptions$ReactiveException: java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 10000ms in 'source(MonoDeferContextual)' (and no fallback has been configured)
+	at reactor.core.Exceptions.propagate(Exceptions.java:410)
+	at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:102)
+	at reactor.core.publisher.Mono.block(Mono.java:1779)
+	at io.modelcontextprotocol.client.McpSyncClient.initialize(McpSyncClient.java:171)
+	at cn.bugstack.ai.test.domain.AutoAgentTest.stdioMcpClient(AutoAgentTest.java:895)
+	at cn.bugstack.ai.test.domain.AutoAgentTest.init(AutoAgentTest.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104)
+		... 36 common frames omitted
+Caused by: java.util.concurrent.TimeoutException: Did not observe any item or terminal signal within 10000ms in 'source(MonoDeferContextual)' (and no fallback has been configured)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.handleTimeout(FluxTimeout.java:296)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.doTimeout(FluxTimeout.java:281)
+	at reactor.core.publisher.FluxTimeout$TimeoutTimeoutSubscriber.onNext(FluxTimeout.java:420)
+	at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.propagateDelay(MonoDelay.java:270)
+	at reactor.core.publisher.MonoDelay$MonoDelayRunnable.run(MonoDelay.java:285)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+25-12-23.15:18:57.010 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:18:57.443 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:19:21.732 [main            ] INFO  AiSearchMCPTest        - Starting AiSearchMCPTest using Java 17.0.3.1 with PID 1092 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:19:21.734 [main            ] INFO  AiSearchMCPTest        - The following 1 profile is active: "dev"
+25-12-23.15:19:25.950 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:19:25.965 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:19:25.966 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:19:26.766 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:19:27.859 [main            ] INFO  AiSearchMCPTest        - Started AiSearchMCPTest in 7.204 seconds (process running for 9.405)
+25-12-23.15:19:27.863 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:19:27.866 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.872 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.876 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.881 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.882 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.882 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.883 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:19:27.917 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:19:30.062 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@26cc136e
+25-12-23.15:19:30.066 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:19:31.191 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:19:31.204 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:19:31.205 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:19:31.695 [HttpClient-12-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:19:31.777 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:19:31.784 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:19:31.785 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:19:31.797 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:19:34.887 [HttpClient-15-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:19:34.982 [main            ] INFO  AiSearchMCPTest        - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:19:40.200 [main            ] INFO  AiSearchMCPTest        - 测试结果:{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","annotations":[],"index":0,"id":"chatcmpl-CpqyBos3mSifSxAIU3a7mGJWWik8L"},"text":"《逆天邪神》的作者是火星引力。","toolCalls":[]}}
+25-12-23.15:19:40.224 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:19:40.646 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:20:12.306 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 9204 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:20:12.310 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:20:16.436 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:20:16.443 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:20:16.444 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:20:17.261 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:20:18.327 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 6.96 seconds (process running for 8.952)
+25-12-23.15:20:18.331 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:20:18.335 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.340 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.340 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.341 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.341 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.342 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.343 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:20:18.375 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:20:19.142 [pool-2-thread-3 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e6a7012
+25-12-23.15:20:19.147 [pool-2-thread-3 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:20:20.099 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:20:20.106 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:20:20.107 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:20:20.493 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:20:20.588 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:20:20.594 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:20:20.595 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:20:20.603 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:20:22.100 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:20:22.157 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:20:26.475 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:20:26.478 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:20:28.674 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:20:28.694 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:20:28.694 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:20:28.699 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:20:29.042 [HttpClient-18-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:20:29.104 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:20:32.786 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-CpqyzEabkFpTxvULYToXEnsiLdUaM","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":27477,"tokensReset":{"nano":0,"negative":false,"seconds":1879747{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":965,"completionTokens":101,"totalTokens":1066,"nativeUsage":{"completion_tokens":101,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":965,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":1066}}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","index":0,"annotations":[],"id":"chatcmpl-CpqyzEabkFpTxvULYToXEnsiLdUaM"},"text":"我可以使用以下类型的工具来帮助你：\n\n1. 网络搜索工具：可以帮助你搜索最新的网页信息，涵盖各种主题和问题。\n2. 特定功能插件：可以执行特定任务，比如计算、翻译、日程管理等（如果有开启相应插件）。\n3. 多工具协同使用：可以同时调用多个工具来完成复杂任务。\n\n如果你有具体需求，可以告诉我，我帮你选择合适的工具来处理。","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.nativeUsage.completion_tokens_details.prompt_tokens_details.result"}]}
+25-12-23.15:20:32.828 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:20:33.266 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:21:24.395 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 11204 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:21:24.397 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:21:27.906 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:21:27.920 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:21:27.920 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:21:28.670 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:21:29.587 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 6.112 seconds (process running for 8.08)
+25-12-23.15:21:29.592 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:21:29.596 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.600 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.600 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.601 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.602 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.602 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.603 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:21:29.638 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:21:30.299 [pool-2-thread-4 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@64492886
+25-12-23.15:21:30.302 [pool-2-thread-4 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:21:31.217 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:21:31.225 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:21:31.225 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:21:31.609 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:21:31.683 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:21:31.687 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:21:31.687 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:21:31.693 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:21:33.088 [HttpClient-15-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:21:33.154 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:21:37.267 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:21:37.270 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:21:39.303 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:21:39.323 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:21:39.323 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:21:39.327 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:21:39.664 [HttpClient-18-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:21:39.713 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:21:43.738 [pool-13-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:21:43.738 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:21:47.994 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-Cpr0DGkWoFZf5ySxYOXJb2YAgDgId","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":10026,"tokensReset":{"nano":0,"negative":false,"seconds":2332796{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":997,"completionTokens":112,"totalTokens":1109,"nativeUsage":{"completion_tokens":112,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":997,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":1109}}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","index":0,"annotations":[],"id":"chatcmpl-Cpr0DGkWoFZf5ySxYOXJb2YAgDgId"},"text":"您好！我这里可以使用的工具主要包括：\n\n1. 网络搜索工具（functions.JavaSDKMCPClient_AIsearch）：用于根据关键词进行网上信息搜索，并可选择是否让大语言模型对搜索结果进行总结。\n\n2. 查询电脑配置信息工具（functions.JavaSDKMCPClient_queryConfig）：可用于查询指定电脑的配置信息。\n\n此外，我可以将多个工具的调用并行执行，以提高效率。\n\n如果您有具体需求或者想了解某个工具的详细功能，欢迎告诉我！","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.nativeUsage.completion_tokens_details.prompt_tokens_details.result"}]}
+25-12-23.15:21:48.016 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:21:48.446 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:22:31.735 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 16548 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:22:31.738 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:22:35.458 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:22:35.466 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:22:35.467 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:22:36.240 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:22:37.155 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 6.418 seconds (process running for 8.63)
+25-12-23.15:22:37.162 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:22:37.167 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.172 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.173 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.174 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.175 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.176 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.177 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:22:37.211 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:22:37.935 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ab40df4
+25-12-23.15:22:37.937 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:22:38.879 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:22:38.889 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:22:38.890 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:22:39.312 [HttpClient-12-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:22:39.407 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:22:39.411 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:22:39.412 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:22:39.417 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:22:40.832 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:22:40.890 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:22:44.843 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:22:44.846 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:22:46.864 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:22:46.884 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:22:46.884 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:22:46.889 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:22:47.224 [HttpClient-18-Worker-0] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:22:47.279 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:22:51.244 [pool-13-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:22:51.245 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:22:56.359 [pool-16-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-csdn, version=1.0.0] and Instructions null
+25-12-23.15:22:56.360 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-csdn, version=1.0.0], instructions=null]
+25-12-23.15:23:03.058 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-Cpr1NmRJIYl59XnhiP3zkZx3h2Kki","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":99991,"tokensReset":{"nano":0,"negative":false,"seconds":208{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":1065,"completionTokens":161,"totalTokens":1226,"nativeUsage":{"completion_tokens":161,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":1065,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":1226}}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","index":0,"annotations":[],"id":"chatcmpl-Cpr1NmRJIYl59XnhiP3zkZx3h2Kki"},"text":"您好！我这里可以使用的工具主要包括：\n\n1. 搜索工具（functions.JavaSDKMCPClient_AIsearch）：可以帮您进行网络搜索，支持指定关键词、搜索模型、输出格式等参数，帮您获取相关信息并智能总结。\n\n2. 电脑配置查询工具（functions.JavaSDKMCPClient_queryConfig）：可以查询指定电脑的硬件配置等信息。\n\n3. 发布文章到CSDN（functions.JavaSDKMCPClient_saveArticle）：可以帮您将文章发布到CSDN博客，包括设置文章标题、内容、标签和简述等。\n\n如果您有特定需求，您可以告诉我，我帮您调用相应的工具。您也可以告诉我需要搜索什么内容或查询什么电脑配置等。","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.nativeUsage.completion_tokens_details.prompt_tokens_details.result"}]}
+25-12-23.15:23:03.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:23:03.493 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-23.15:24:33.022 [main            ] INFO  AutoAgentTest          - Starting AutoAgentTest using Java 17.0.3.1 with PID 14552 (started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+25-12-23.15:24:33.024 [main            ] INFO  AutoAgentTest          - The following 1 profile is active: "dev"
+25-12-23.15:24:36.470 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-23.15:24:36.480 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-23.15:24:36.480 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-23.15:24:37.080 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-23.15:24:37.986 [main            ] INFO  AutoAgentTest          - Started AutoAgentTest in 5.92 seconds (process running for 7.881)
+25-12-23.15:24:37.990 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-23.15:24:37.994 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-23.15:24:37.998 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-23.15:24:37.998 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-23.15:24:37.999 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-23.15:24:38.000 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-23.15:24:38.000 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-23.15:24:38.001 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-23.15:24:38.033 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-23.15:24:38.734 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@5566e4a3
+25-12-23.15:24:38.740 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-23.15:24:39.724 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:24:39.733 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-23.15:24:39.733 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:24:40.240 [HttpClient-12-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:24:40.329 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:24:40.337 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-23.15:24:40.338 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-23.15:24:40.344 [main            ] ERROR AiAgentAutoConfiguration - AI Agent 自动装配失败
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'ai_client_tool_mcp_5007' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:951)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1272)
+	at cn.bugstack.ai.domain.agent.service.armory.AbstractArmorySupport.getBean(AbstractArmorySupport.java:68)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:50)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientModelNode.doApply(AiClientModelNode.java:20)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:49)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientToolMcpNode.doApply(AiClientToolMcpNode.java:23)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:39)
+	at cn.bugstack.ai.domain.agent.service.armory.AiClientApiNode.doApply(AiClientApiNode.java:15)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.router(AbstractMultiThreadStrategyRouter.java:22)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:47)
+	at cn.bugstack.ai.domain.agent.service.armory.RootNode.doApply(RootNode.java:17)
+	at cn.bugstack.wrench.design.framework.tree.AbstractMultiThreadStrategyRouter.apply(AbstractMultiThreadStrategyRouter.java:31)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:67)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration.onApplicationEvent(AiAgentAutoConfiguration.java:21)
+	at cn.bugstack.ai.config.AiAgentAutoConfiguration$$SpringCGLIB$$0.onApplicationEvent(<generated>)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.boot.context.event.EventPublishingRunListener.ready(EventPublishingRunListener.java:109)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$ready$6(SpringApplicationRunListeners.java:80)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.ready(SpringApplicationRunListeners.java:80)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:332)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:231)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+25-12-23.15:24:41.756 [HttpClient-15-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:24:41.829 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:24:45.845 [pool-4-thread-1 ] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:24:45.848 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:24:47.816 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Secure MCP Filesystem Server running on stdio
+25-12-23.15:24:47.836 [pool-10-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=secure-filesystem-server, version=0.2.0] and Instructions null
+25-12-23.15:24:47.837 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=null, prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=secure-filesystem-server, version=0.2.0], instructions=null]
+25-12-23.15:24:47.842 [pool-12-thread-1] INFO  StdioClientTransport   - STDERR Message received: Client does not support MCP Roots, using allowed directories set from server args: [ 'D:\\文件', 'D:\\文件' ]
+25-12-23.15:24:48.167 [HttpClient-18-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-23.15:24:48.232 [main            ] INFO  AutoAgentTest          - SSE:InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-23.15:24:52.149 [pool-13-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-computer, version=1.0.0] and Instructions null
+25-12-23.15:24:52.149 [main            ] INFO  AutoAgentTest          - Computer MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-computer, version=1.0.0], instructions=null]
+25-12-23.15:24:56.927 [pool-16-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-csdn, version=1.0.0] and Instructions null
+25-12-23.15:24:56.927 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-csdn, version=1.0.0], instructions=null]
+25-12-23.15:25:01.611 [pool-19-thread-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], Info: Implementation[name=mcp-server-weixin, version=1.0.0] and Instructions null
+25-12-23.15:25:01.611 [main            ] INFO  AutoAgentTest          - Stdio MCP Initialized: InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental=null, logging=LoggingCapabilities[], prompts=null, resources=null, tools=ToolCapabilities[listChanged=true]], serverInfo=Implementation[name=mcp-server-weixin, version=1.0.0], instructions=null]
+25-12-23.15:25:08.168 [main            ] INFO  AutoAgentTest          - 测试结果(call):{"metadata":{"empty":false,"id":"chatcmpl-Cpr3Q67ZTPpmihWM4ldc6igumLCbO","model":"gpt-4.1-mini-2025-04-14","rateLimit":{"requestsLimit":200,"requestsRemaining":199,"requestsReset":{"nano":0,"negative":false,"seconds":432,"units":["SECONDS","NANOS"],"zero":false},"tokensLimit":100000,"tokensRemaining":6789,"tokensReset":{"nano":0,"negative":false,"seconds":2415976{"$ref":"$.metadata.rateLimit.requestsReset.units"},"zero":false}},"usage":{"promptTokens":1122,"completionTokens":133,"totalTokens":1255,"nativeUsage":{"completion_tokens":133,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens":1122,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":1255}}},"result":{"metadata":{"contentFilters":[],"empty":true,"finishReason":"STOP"},"output":{"media":[],"messageType":"ASSISTANT","metadata":{"role":"ASSISTANT","messageType":"ASSISTANT","finishReason":"STOP","refusal":"","index":0,"annotations":[],"id":"chatcmpl-Cpr3Q67ZTPpmihWM4ldc6igumLCbO"},"text":"我可以使用以下工具：\n\n1. 搜索工具（functions.JavaSDKMCPClient_AIsearch）：可以执行网络搜索，获取相关信息和资料。\n2. 查询电脑配置（functions.JavaSDKMCPClient_queryConfig）：可以查询指定电脑的硬件配置信息。\n3. 发布文章到CSDN（functions.JavaSDKMCPClient_saveArticle）：可以帮你发布文章到CSDN平台。\n4. 微信公众号消息通知（functions.JavaSDKMCPClient_weixinNotice）：可以发送微信公众号消息通知。\n\n你可以告诉我你需要使用哪种工具或者告诉我你的需求，我来帮你操作。","toolCalls":[]}},"results":[{"$ref":"$.metadata.rateLimit.requestsReset.tokensReset.usage.nativeUsage.completion_tokens_details.prompt_tokens_details.result"}]}
+25-12-23.15:25:08.193 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-23.15:25:08.584 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.

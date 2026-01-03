@@ -1,0 +1,32 @@
+server:
+  port: 8092
+
+
+
+# 数据库配置；启动时配置数据库资源信息
+spring:
+  datasource:
+    pgvector:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: postgres
+      url: jdbc:postgresql://36.150.231.63:15432/postgres
+      type: com.zaxxer.hikari.HikariDataSource
+      hikari:
+        maximum-pool-size: 5
+        minimum-idle: 2
+        idle-timeout: 30000
+        connection-timeout: 30000
+  ai:
+    openai:
+      base-url: https://ai.juguang.chat/
+      api-key: sk-lnIUXBt5rvFL4lOFgpquX3u7SUTvM1wodKv2JWg1udspoFzD
+      # 添加以下配置
+      speech:
+        enabled: false
+      audio:
+        speech:
+          enabled: false
+        enabled: false
+
+

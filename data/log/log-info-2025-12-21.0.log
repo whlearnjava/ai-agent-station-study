@@ -1,0 +1,92 @@
+25-12-21.16:56:09.770 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 13748 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-21.16:56:09.773 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-21.16:56:12.157 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-21.16:56:12.179 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-21.16:56:12.182 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-21.16:56:12.182 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-21.16:56:12.310 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-21.16:56:12.311 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2455 ms
+25-12-21.16:56:13.569 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-21.16:56:13.575 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-21.16:56:13.575 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-21.16:56:14.002 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-21.16:56:15.644 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-21.16:56:15.659 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-21.16:56:15.684 [main            ] INFO  Application            - Started Application in 6.958 seconds (process running for 10.393)
+25-12-21.16:56:15.689 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-21.16:56:15.694 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.699 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.699 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.699 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.699 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.704 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.704 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-21.16:56:15.739 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-21.16:56:49.755 [pool-2-thread-1 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@460f2a51
+25-12-21.16:56:49.757 [pool-2-thread-1 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-21.16:56:50.689 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:56:50.694 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-21.16:56:50.695 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:56:51.242 [HttpClient-12-Worker-2] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-21.16:56:51.325 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-21.16:56:51.330 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-21.16:56:51.330 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:56:51.436 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_model_2001
+25-12-21.16:56:51.436 [main            ] INFO  AiClientAdvisorNode    - Ai Agent 构建节点，Advisor 顾问角色{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:56:51.450 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_advisor_4001
+25-12-21.16:56:51.450 [main            ] INFO  AiClientNode           - Ai Agent 构建节点，客户端{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:56:51.532 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3101
+25-12-21.16:56:51.593 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3102
+25-12-21.16:56:51.669 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3103
+25-12-21.16:56:51.670 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3104
+25-12-21.16:56:51.670 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配完成，结果: null
+25-12-21.16:57:01.713 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-21.16:57:02.356 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-21.16:57:02.367 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-21.16:57:02.860 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.
+25-12-21.16:57:10.479 [main            ] INFO  Application            - Starting Application using Java 17.0.3.1 with PID 11636 (D:\edge\ai-agent-station-study\ai-agent-station-study-app\target\classes started by 20206 in D:\edge\ai-agent-station-study)
+25-12-21.16:57:10.481 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-12-21.16:57:12.954 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 8091 (http)
+25-12-21.16:57:12.973 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-12-21.16:57:12.975 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-12-21.16:57:12.975 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.36]
+25-12-21.16:57:13.092 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-12-21.16:57:13.092 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2335 ms
+25-12-21.16:57:14.219 [main            ] INFO  PgVectorStore          - Using the vector table name: vector_store_openai. Is empty: false
+25-12-21.16:57:14.226 [main            ] INFO  PgVectorStore          - Initializing PGVectorStore schema for table: vector_store_openai in schema: public
+25-12-21.16:57:14.226 [main            ] INFO  PgVectorStore          - vectorTableValidationsEnabled false
+25-12-21.16:57:14.616 [main            ] INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+25-12-21.16:57:15.403 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-12-21.16:57:15.418 [main            ] INFO  TomcatWebServer        - Tomcat started on port 8091 (http) with context path '/'
+25-12-21.16:57:15.432 [main            ] INFO  Application            - Started Application in 5.906 seconds (process running for 6.988)
+25-12-21.16:57:15.437 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配开始，配置: AiAgentAutoConfigProperties(enabled=true, clientIds=[3101, 3102, 3103, 3104])
+25-12-21.16:57:15.440 [main            ] INFO  AiAgentAutoConfiguration - 开始自动装配AI客户端，客户端ID列表: [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.466 [pool-2-thread-1 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_api) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.467 [pool-2-thread-2 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_model) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.468 [pool-2-thread-4 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_system_prompt) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.468 [pool-2-thread-3 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_tool_mcp) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.468 [pool-2-thread-5 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client_advisor) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.469 [pool-2-thread-6 ] INFO  AiClientLoadDataStrategy - 查询配置数据(ai_client) [3101, 3102, 3103, 3104]
+25-12-21.16:57:15.497 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Starting...
+25-12-21.16:57:16.502 [pool-2-thread-5 ] INFO  HikariPool             - MainHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@77eca5e5
+25-12-21.16:57:16.505 [pool-2-thread-5 ] INFO  HikariDataSource       - MainHikariPool - Start completed.
+25-12-21.16:57:17.661 [main            ] INFO  RootNode               - Ai Agent 构建，数据加载节点 {"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:57:17.666 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_api_1001
+25-12-21.16:57:17.666 [main            ] INFO  AiClientToolMcpNode    - Ai Agent 构建节点，Tool MCP 工具配置{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:57:18.055 [HttpClient-12-Worker-1] INFO  McpAsyncClient         - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AIsearch, version=1.4.1] and Instructions null
+25-12-21.16:57:18.123 [main            ] INFO  AiClientToolMcpNode    - Tool SSE MCP Initialized InitializeResult[protocolVersion=2024-11-05, capabilities=ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], serverInfo=Implementation[name=AIsearch, version=1.4.1], instructions=null]
+25-12-21.16:57:18.128 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_tool_mcp_5006
+25-12-21.16:57:18.128 [main            ] INFO  AiClientModelNode      - Ai Agent 构建节点，Mode 对话模型{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:57:18.247 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_model_2001
+25-12-21.16:57:18.248 [main            ] INFO  AiClientAdvisorNode    - Ai Agent 构建节点，Advisor 顾问角色{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:57:18.264 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_advisor_4001
+25-12-21.16:57:18.265 [main            ] INFO  AiClientNode           - Ai Agent 构建节点，客户端{"commandIdList":["3101","3102","3103","3104"],"commandType":"client","loadDataStrategy":"aiClientLoadDataStrategy"}
+25-12-21.16:57:18.339 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3101
+25-12-21.16:57:18.420 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3102
+25-12-21.16:57:18.474 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3103
+25-12-21.16:57:18.474 [main            ] INFO  AbstractArmorySupport  - bean注册成功：ai_client_3104
+25-12-21.16:57:18.474 [main            ] INFO  AiAgentAutoConfiguration - AI Agent 自动装配完成，结果: null
+25-12-21.16:59:28.383 [SpringApplicationShutdownHook] INFO  GracefulShutdown       - Commencing graceful shutdown. Waiting for active requests to complete
+25-12-21.16:59:28.959 [tomcat-shutdown ] INFO  GracefulShutdown       - Graceful shutdown complete
+25-12-21.16:59:28.964 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown initiated...
+25-12-21.16:59:35.289 [SpringApplicationShutdownHook] INFO  HikariDataSource       - MainHikariPool - Shutdown completed.

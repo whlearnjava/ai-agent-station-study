@@ -1,0 +1,7 @@
+2025-12-23T15:24:59.032+08:00  INFO 15016 --- [mcp-server-weixin] [main] c.b.m.s.weixin.McpServerApplication      : Starting McpServerApplication v1.0.0 using Java 17.0.3.1 with PID 15016 (D:\MavenProject\AIAgent\mcp-server-weixin-15-weixin-notice-service (1)\mcp-server-weixin-15-weixin-notice-service\target\mcp-server-weixin-1.0.0.jar started by 20206 in D:\edge\ai-agent-station-study\ai-agent-station-study-app)
+2025-12-23T15:24:59.039+08:00  INFO 15016 --- [mcp-server-weixin] [main] c.b.m.s.weixin.McpServerApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-12-23T15:25:01.395+08:00  INFO 15016 --- [mcp-server-weixin] [main] o.s.a.a.m.s.MpcServerAutoConfiguration   : Registered tools1 notification: true
+2025-12-23T15:25:01.535+08:00  INFO 15016 --- [mcp-server-weixin] [pool-2-thread-1] i.m.server.McpAsyncServer                : Client initialize request - Protocol: 2024-11-05, Capabilities: ClientCapabilities[experimental=null, roots=null, sampling=null], Info: Implementation[name=Java SDK MCP Client, version=1.0.0]
+2025-12-23T15:25:01.778+08:00  INFO 15016 --- [mcp-server-weixin] [main] c.b.m.s.weixin.McpServerApplication      : Started McpServerApplication in 3.822 seconds (process running for 4.763)
+2025-12-23T15:25:01.785+08:00  INFO 15016 --- [mcp-server-weixin] [main] c.b.m.s.weixin.McpServerApplication      : check properties ...
+2025-12-23T15:25:01.785+08:00  INFO 15016 --- [mcp-server-weixin] [main] c.b.m.s.weixin.McpServerApplication      : weixin properties key wx5a228ff69e28a91f
