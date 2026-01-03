@@ -71,7 +71,7 @@ public class OpenAiCodeReview {
         OpenAiChatModel chatModel = OpenAiChatModel.builder()
                 .openAiApi(openAiApi)
                 .defaultOptions(OpenAiChatOptions.builder()
-                        .model("gpt-4.1-mini")
+                        .model("gpt-5.1-thinking-all")
                         .build()).build();
 
         ChatClient client = ChatClient.create(chatModel);
